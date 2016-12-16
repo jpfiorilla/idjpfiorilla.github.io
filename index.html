@@ -4,6 +4,12 @@
         <script>
         function play(){
                 var audio = document.getElementById("audio");
+                var rando = Math.floor(Math.random() * 5));
+                if (rando === 0) audio = document.getElementById("audio");
+                else if (rando === 1) audio = document.getElementById("sniff1");
+                else if (rando === 2) audio = document.getElementById("sniff2");
+                else if (rando === 3) audio = document.getElementById("sniff3");
+                else if (rando === 4) audio = document.getElementById("sniff4");
                 audio.play();
             }
         </script>
@@ -40,8 +46,10 @@
                 <button id="butt" onclick="play();"></button>
             </div>
         </div>
-        <audio id="audio">
-            <source src="ideology.mp3" type="audio/mpeg">
-        </audio>
-    </bocy>
+        <audio id="audio"><source src="ideology.mp3" type="audio/mpeg"></audio>
+        <audio id="sniff1"><source src="sniff1.mp3" type="audio/mpeg"></audio>
+        <audio id="sniff2"><source src="sniff2.mp3" type="audio/mpeg"></audio>
+        <audio id="sniff3"><source src="sniff3.mp3" type="audio/mpeg"></audio>
+        <audio id="sniff4"><source src="sniff4.mp3" type="audio/mpeg"></audio>
+    </body>
 </html>
